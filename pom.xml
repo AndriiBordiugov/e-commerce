@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bordisoft.solutions.ecommerce</groupId>
+    <artifactId>e-commerce-parent</artifactId>
+    <version>${ecommerce.version}</version>
+    <name>e-commerce-parent</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>e-commerce-back-end</module>
+        <module>e-commerce-front-end</module>
+    </modules>
+
+    <properties>
+        <gwtbootstrap3.version>0.4</gwtbootstrap3.version>
+        <ecommerce.version>1.0-SNAPSHOT</ecommerce.version>
+    </properties>
+
+    <dependencyManagement>
+
+        <!--front-end dependencies-->
+        <dependencies>
+            <dependency>
+                <groupId>org.gwtbootstrap3</groupId>
+                <artifactId>gwtbootstrap3</artifactId>
+                <version>${gwtbootstrap3.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>
