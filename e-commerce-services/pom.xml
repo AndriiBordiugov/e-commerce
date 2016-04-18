@@ -7,14 +7,10 @@
     <parent>
         <groupId>com.bordisoft.solutions.ecommerce</groupId>
         <artifactId>e-commerce-parent</artifactId>
-        <version>${ecommerce.version}</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.bordisoft.solutions.ecommerce</groupId>
-    <artifactId>e-commerce-back-end</artifactId>
-    <version>${ecommerce.version}</version>
-    <name>e-commerce-back-end</name>
-    <packaging>jar</packaging>
-
+    <artifactId>e-commerce-services</artifactId>
+    <name>e-commerce-services</name>
 
 </project>
