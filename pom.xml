@@ -20,6 +20,7 @@
         <gwtbootstrap3.version>0.4</gwtbootstrap3.version>
         <gwt-plugin-2-version>2.7.0</gwt-plugin-2-version>
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <repositories>
@@ -52,6 +53,34 @@
     <reporting>
         <outputDirectory>target/site</outputDirectory>
     </reporting>
+
+    <build>
+        <directory>target</directory>
+        <outputDirectory>target/classes</outputDirectory>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <testOutputDirectory>target/test-classes</testOutputDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/main/test</testSourceDirectory>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencyManagement>
 
